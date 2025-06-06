@@ -1,0 +1,946 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blanco: #fae8e3;
+    --negro: #181310;
+    --amarillo: #f59f2f;
+    --rojo: #f25d49;
+    --celeste: #b1c5f5;
+    --azul: #204ecf;
+}
+
+
+/*///////////// PARA CELULAR /////////////*/
+
+
+h1,
+h2,
+h3 {
+    font-family: "Parkinsans", sans-serif;
+}
+
+body h1 {
+    font-size: 2em;
+}
+
+body h2 {
+    font-size: 1.5em;
+}
+
+body h3 {
+    font-size: 1em;
+}
+
+body p {
+    font-family: "Dosis", sans-serif;
+    font-size: 1em;
+}
+
+body {
+    cursor: url(img/cursor.png), auto;
+}
+
+a,
+input,
+select {
+    cursor: url(img/mano.png), auto;
+}
+
+
+
+/*///////////// MENÚ DE NAVEGACIÓN /////////////*/
+
+#logo img {
+    height: 50px;
+}
+
+#img-hover {
+    display: none;
+}
+
+#menu {
+    background-color: var(--rojo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 1em;
+}
+
+#menu span {
+    color: var(--blanco);
+}
+
+.link,
+#diferente {
+    display: none;
+}
+
+/*///////////// BANNER /////////////*/
+
+#nosotros {
+    position: relative;
+    height: 600px;
+}
+
+#nosotros>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom right;
+    display: block;
+    filter: brightness(50%) saturate(150%);
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    color: var(--blanco);
+    width: 85%;
+    gap: 0.6em;
+    margin: 0 auto;
+    left: 0;
+    text-align: center;
+    right: 0;
+}
+
+#banner>p {
+    display: none;
+}
+
+#banner p span {
+    font-weight: 700;
+}
+
+#banner article {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+}
+
+#banner article span {
+    color: var(--amarillo);
+}
+
+#banner a {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    width: 8em;
+    text-align: center;
+    font-size: 0.8em;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--celeste);
+    background-color: var(--azul);
+    padding: 0.8em;
+    border-radius: 1em;
+    transition: 0.3s;
+}
+
+#banner a:hover {
+    color: var(--azul);
+    background-color: var(--celeste);
+}
+
+
+/*///////////// ACTIVIDADES /////////////*/
+
+#actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 3em;
+    background-color: var(--blanco);
+}
+
+#actividades>div {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+#actividades h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--rojo);
+}
+
+#actividades h3 {
+    color: var(--azul);
+    text-align: center;
+}
+
+#actividades p {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: var(--negro);
+}
+
+#articles article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--celeste);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#actividades article img {
+    border-radius: 1em;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#actividades a {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: "Parkinsans", sans-serif;
+    font-size: 0.8em;
+    color: var(--blanco);
+    background-color: var(--amarillo);
+    border-radius: 0.8em;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+
+#actividades article:nth-of-type(5) {
+    display: none;
+}
+
+.fondo-article {
+    background-color: var(--blanco);
+    padding: 0.5em;
+    border-radius: 0.6em;
+}
+
+#actividades article:nth-of-type(4) img {
+    display: none;
+}
+
+#actividades article>p {
+    display: none;
+}
+
+/*///////////// GALERÍA /////////////*/
+
+#gallery h2,
+#gallery p {
+    transition: 0.3s;
+    color: var(--negro);
+}
+
+#shown-mobile {
+    position: relative;
+}
+
+
+#gallery {
+    background-color: var(--negro);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+#grid1 {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#gallery h1 {
+    color: var(--blanco);
+    text-align: center;
+}
+
+#gallery h1 span {
+    color: var(--amarillo);
+}
+
+#gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+
+#gallery img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 768px;
+    overflow: hidden;
+    filter: brightness(90%);
+}
+
+.text-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    text-align: center;
+    color: var(--blanco);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1em;
+    width: 90%;
+    font-size: 0.9em;
+}
+
+#grid1 a {
+    margin: 0 auto;
+    display: inline-block;
+    width: 8em;
+    text-align: center;
+    font-size: 0.8em;
+    font-family: "Parkinsans", sans-serif;
+    color: var(--celeste);
+    background-color: var(--azul);
+    padding: 0.8em;
+    border-radius: 1em;
+    transition: 0.3s;
+}
+
+#grid2 {
+    display: none;
+}
+
+/*///////////// NEWSLETTER /////////////*/
+
+#newsletter {
+    background-color: var(--blanco);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin: 0 auto;
+}
+
+#newsletter h1 {
+    text-align: center;
+    color: var(--amarillo);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0 auto;
+}
+
+fieldset {
+    background-color: var(--blanco);
+    padding: 1em;
+    border-radius: 1em;
+    border-style: none;
+    border: var(--azul) 2px solid;
+}
+
+input,
+select {
+    color: var(--negro);
+    font-family: "Dosis", sans-serif;
+    font-size: 1em;
+    display: block;
+    flex-direction: row;
+    width: 100%;
+    padding: 1em;
+    border-style: none;
+    border-radius: 0.5em;
+    transition: 0.3s;
+    background-color: var(--celeste);
+}
+
+input:hover,
+select:hover {
+    box-shadow: inset 0 0 0 2px var(--azul);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+    box-shadow: inset 0 0 0 2px var(--rojo);
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+    width: auto;
+    border-radius: 0.5em;
+}
+
+input[type="checkbox"]:hover {
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+}
+
+fieldset:nth-of-type(3) {
+    display: flex;
+    gap: 1em;
+}
+
+fieldset:nth-of-type(3) legend {
+    color: var(--amarillo);
+}
+
+input::placeholder {
+    color: var(--negro);
+    opacity: 50%;
+}
+
+input[type="submit"] {
+    width: 50%;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 auto;
+    color: var(--blanco);
+    background-color: var(--rojo);
+    padding: 1em;
+    border-style: none;
+    transition: 0.3s;
+
+}
+
+input[type="submit"]:hover {
+    color: var(--rojo);
+    box-shadow: inset 0 0 0 2px var(--rojo);
+    background-color: var(--blanco);
+}
+
+label {
+    color: var(--negro);
+    font-family: "Dosis", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+legend {
+    padding: 0.5em;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: var(--rojo);
+    font-weight: 600;
+    font-family: "Parkinsans", sans-serif;
+}
+
+/*///////////// COOKIES /////////////*/
+
+#cookies {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 7vh;
+    height: auto;
+}
+
+#cookies img {
+    width: 7vh;
+    height: auto;
+    transition: 0.3s;
+}
+
+#cookies img:hover {
+    transform: rotateZ(80deg);
+}
+
+/*///////////// FOOTER /////////////*/
+
+footer {
+    padding: 3em;
+    background-color: var(--amarillo);
+    display: flex;
+    margin: 0 auto;
+}
+
+footer h2 {
+    display: none;
+}
+
+footer img {
+    width: 2em;
+    height: auto;
+}
+
+footer div {
+    display: flex;
+    gap: 2em;
+    margin: 0 auto;
+}
+
+/*///////////// PARA TABLET /////////////*/
+
+
+@media all and (min-width:768px) {
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+
+    /*///////////// MENÚ DE NAVEGACIÓN /////////////*/
+
+    #menu img {
+        height: 75px;
+        padding-left: 2em;
+    }
+
+    nav {
+        display: flex;
+        gap: 3em;
+        margin-right: 2em;
+
+    }
+
+    .link {
+        display: initial;
+        font-family: "Parkinsans", sans-serif;
+        color: var(--blanco);
+        font-size: 1em;
+    }
+
+    #icon {
+        display: none;
+    }
+
+    /*///////////// BANNER /////////////*/
+
+    #nosotros {
+        height: 700px;
+    }
+
+    #banner {
+        text-align: left;
+    }
+
+    #banner article {
+        text-align: left;
+        margin: initial;
+    }
+
+    #banner a {
+        margin: initial;
+        font-size: 1em;
+    }
+
+    #banner p {
+        font-size: 1.2em;
+    }
+
+    /*///////////// ACTIVIDADES /////////////*/
+
+    #actividades p {
+        font-size: 0.9em;
+        text-align: left;
+    }
+
+    #actividades img {
+        min-height: 200px;
+    }
+
+    #actividades>div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3em;
+        margin: 0 auto;
+    }
+
+    #actividades article {
+        width: 45%;
+        margin: 0;
+        text-align: left;
+    }
+
+    #actividades a {
+        margin: initial;
+        font-size: 1.1em;
+    }
+
+    #actividades article:nth-of-type(4) img {
+        display: initial;
+    }
+
+    #actividades h3 {
+        text-align: left;
+    }
+
+    /*///////////// GALERÍA /////////////*/
+
+    #gallery p {
+        font-size: 1.3em;
+        text-align: left;
+    }
+
+    #gallery img {
+        aspect-ratio: initial;
+        max-width: none;
+    }
+
+    #gallery article {
+        position: relative;
+    }
+
+    #shown-mobile img {
+        aspect-ratio: initial;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    #shown-mobile div:nth-of-type(1) {
+        height: 100%;
+    }
+
+    #shown-mobile {
+        height: 100%;
+        grid-row: span 2;
+    }
+
+    #shown-mobile a {
+        font-size: 1em;
+    }
+
+    #grid1 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 40vh);
+        height: auto;
+    }
+
+    #grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40vh;
+        height: 40vh;
+    }
+
+    #grid2 img {
+        display: none;
+    }
+
+    #shown-tablet h2 {
+        text-align: left;
+    }
+
+    #shown-tablet div:nth-of-type(1) {
+        height: 100%;
+    }
+
+    #shown-tablet img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    #grid2 #shown-tablet {
+        height: 100%;
+        display: block;
+        grid-column: span 2;
+    }
+
+}
+
+/*///////////// PARA DESKTOP /////////////*/
+
+
+@media all and (min-width:1024px) {
+
+    h1 {
+        font-size: 2.6em;
+    }
+
+    h2 {
+        font-size: 2.1em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    /*///////////// MENÚ DE NAVEGACIÓN /////////////*/
+
+    #logo img {
+        height: 90px;
+        margin-left: 1em;
+    }
+
+    #img-hover {
+        display: initial;
+    }
+
+    #logo {
+        position: relative;
+        display: inline-block;
+    }
+
+    #logo #img-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    #logo:hover #img-hover {
+        opacity: 1;
+    }
+
+    #logo:hover #img-normal {
+        opacity: 0;
+    }
+
+    .link,
+    #diferente {
+        font-size: 1.1em;
+    }
+
+
+    #diferente {
+        display: initial;
+        font-family: "Parkinsans", sans-serif;
+        font-weight: 600;
+        color: var(--azul);
+        position: relative;
+    }
+
+    #diferente::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--azul);
+        transition: 0.3s;
+
+    }
+
+    #diferente:hover::after {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .link {
+        position: relative;
+    }
+
+    .link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--blanco);
+        transition: 0.3s;
+
+    }
+
+    .link:hover::after {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    /*///////////// BANNER /////////////*/
+
+    #banner p {
+        font-size: 1.3em;
+    }
+
+    #nosotros {
+        height: 800px;
+    }
+
+    #banner>p {
+        display: initial;
+    }
+
+    #banner a {
+        font-size: 1.1em;
+        width: 9em;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    /*///////////// ACTIVIDADES /////////////*/
+
+    #actividades {
+        padding: 3em;
+    }
+
+    #articles article {
+        position: relative;
+    }
+
+    #articles article>p {
+        display: initial;
+        position: absolute;
+        color: var(--blanco);
+        font-size: 1.2em;
+        font-weight: 600;
+        top: 1.2em;
+        right: 0;
+        padding: 0.8em;
+        padding-right: 3em;
+        background-color: var(--rojo);
+    }
+
+    #articles article:nth-of-type(2n)>p {
+        background-color: var(--azul);
+    }
+
+    #articles article:nth-of-type(3)>p {
+        background-color: var(--amarillo);
+    }
+
+    #articles {
+        margin: 0;
+        justify-content: center;
+    }
+
+    #articles article {
+        width: 29%;
+    }
+
+    #articles p {
+        font-size: 1em;
+    }
+
+    #articles a {
+        font-size: 1.1em;
+        transition: 0.3s;
+    }
+
+    #articles a:hover {
+        background-color: var(--azul)
+    }
+
+    #articles article:nth-of-type(5) {
+        display: flex;
+    }
+
+    /*///////////// GALERÍA /////////////*/
+
+    #grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #grid div {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    #grid img {
+        filter: brightness(55%) saturate(70%);
+        transition: 0.3s;
+    }
+
+    #grid article:hover img, #grid1 div:hover img, #grid2 div:hover img {
+        filter: brightness(100%) saturate(100%);
+        transform: scale(1.1);
+    }
+
+    #grid .text-grid {
+        position: absolute;
+        height: auto;
+    }
+
+    #grid .text-grid h2, #grid .text-grid p{
+        color: var(--blanco);
+    }
+
+    #grid1 {
+        width: 50%;
+    }
+
+    #grid2 {
+        width: 50%;
+    }
+
+    #grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 40vh);
+    }
+
+    #grid2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    #shown-mobile:hover h2{
+        color: var(--negro);
+    }
+
+    #shown-tablet:hover h2, #shown-tablet:hover p{
+        color: var(--negro);
+    }
+
+    #grid a:hover{
+        color: var(--azul);
+        background-color: var(--celeste);
+    }
+
+    /*///////////// FOOTER /////////////*/
+
+    footer {
+        justify-content: space-between;
+    }
+
+    footer div {
+        margin: initial;
+        gap: 3em;
+        align-items: center;
+    }
+
+    footer img {
+        width: 3em;
+    }
+
+    footer h2 {
+        text-align: center;
+        display: initial;
+        font-size: 1.5em;
+        color: var(--azul);
+    }
+}
